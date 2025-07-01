@@ -1,5 +1,17 @@
-from django.shortcuts import render
+from django.views.generic import TemplateView
 
 
-def generate_password_template(request):
-    return render(request, 'menu/generate_password.html')
+class GeneratePasswordView(TemplateView):
+    template_name = 'menu/generate_password.html'
+
+
+class SocialSecurityView(TemplateView):
+    template_name = 'menu/social_security.html'
+
+
+class ScummersView(TemplateView):
+    template_name = 'menu/scummers.html'
+
+
+class VirusesView(TemplateView):
+    template_name = 'menu/viruses.html'

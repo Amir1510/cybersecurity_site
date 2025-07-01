@@ -25,7 +25,10 @@ SECRET_KEY = 'django-insecure-zj#n=h%&t8pwxb=*te+yovk8-m_-q_#@bio7_pew=4xhebb+!k
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'localhost',
+    '127.0.0.1'
+]
 
 
 # Application definition
@@ -53,12 +56,12 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'cybersecurity_project.urls'
 
-TEMPLATE_NAME = BASE_DIR / 'template'
+TEMPLATES_DIR = BASE_DIR / 'templates'
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [TEMPLATE_NAME],
+        'DIRS': [TEMPLATES_DIR],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -124,6 +127,7 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     BASE_DIR / 'static'
 ]
+
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 
